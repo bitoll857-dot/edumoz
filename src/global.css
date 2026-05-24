@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-edumoz-blue: #1e40af;
+  --color-edumoz-blue-dark: #172554;
+  --color-edumoz-yellow: #facc15;
+  --color-edumoz-ink: #111827;
+  --color-edumoz-muted: #64748b;
+  --font-sans: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-edumoz-ink antialiased;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
