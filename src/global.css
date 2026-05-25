@@ -21,4 +21,55 @@
   a {
     @apply transition-colors;
   }
+
+  html.a11y-text-medium {
+    font-size: 18px;
+  }
+
+  html.a11y-text-large {
+    font-size: 20px;
+  }
+
+  html.a11y-font-readable body {
+    font-family: Arial, Verdana, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html.a11y-motion-reduced *,
+  html.a11y-motion-reduced *::before,
+  html.a11y-motion-reduced *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.a11y-contrast-dark-high body {
+    @apply bg-slate-950 text-white;
+  }
+
+  html.a11y-contrast-dark-high header,
+  html.a11y-contrast-dark-high footer,
+  html.a11y-contrast-dark-high section,
+  html.a11y-contrast-dark-high article,
+  html.a11y-contrast-dark-high form,
+  html.a11y-contrast-dark-high aside {
+    @apply border-slate-700 bg-slate-950 text-white;
+  }
+
+  html.a11y-contrast-light-high body {
+    @apply bg-white text-black;
+  }
+
+  html.a11y-contrast-light-high header,
+  html.a11y-contrast-light-high footer,
+  html.a11y-contrast-light-high section,
+  html.a11y-contrast-light-high article,
+  html.a11y-contrast-light-high form,
+  html.a11y-contrast-light-high aside {
+    @apply border-black bg-white text-black;
+  }
+
+  html.a11y-contrast-reading body {
+    @apply bg-yellow-50 text-slate-950;
+  }
 }
