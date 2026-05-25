@@ -19,7 +19,7 @@ export default component$<UserSidebarProps>(({ onClose$ }) => {
         { label: "Nome", value: user.name },
         { label: "Email", value: user.email },
         { label: "Telefone", value: user.phone },
-        { label: "Perfil", value: user.customerType },
+        { label: "Perfil", value: user.role },
         { label: "Cidade", value: user.city },
         { label: "Contacto", value: user.preferredContactMethod },
         { label: "Estado", value: user.status },
@@ -96,7 +96,6 @@ export default component$<UserSidebarProps>(({ onClose$ }) => {
             {!isLoggedIn && (
               <div class="mt-6 grid grid-cols-2 gap-3">
                 <button
-                  fullWidth
                   class="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-sm font-semibold text-cyan-200 hover:bg-cyan-400/20"
                   onClick$={() => {
                     authMode.value = "login";
@@ -107,7 +106,6 @@ export default component$<UserSidebarProps>(({ onClose$ }) => {
                 </button>
 
                 <button
-                  fullWidth
                   class="rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm font-semibold text-slate-200 hover:border-cyan-400/30 hover:text-cyan-200"
                   onClick$={() => {
                     authMode.value = "register";
@@ -174,7 +172,7 @@ export default component$<UserSidebarProps>(({ onClose$ }) => {
 
         <div class="border-t border-slate-800 bg-slate-950/90 px-6 py-6">
           <button
-            fullWidth
+            
             class="flex w-full items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 px-5 py-4 text-sm font-semibold text-cyan-200 hover:border-cyan-400/50 hover:bg-cyan-400/20"
             onClick$={() => {
               if (!isLoggedIn) {

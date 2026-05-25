@@ -44,7 +44,6 @@ export default component$(() => {
 
       <button
         type="submit"
-        fullWidth
         class="flex h-12 items-center justify-center rounded-2xl text-sm font-bold"
       >
         Entrar
